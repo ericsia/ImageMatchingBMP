@@ -22,3 +22,22 @@ Here's a summary of the code's functionality:
 2. It captures a screenshot of the entire screen.
 3. It iterates over the screenshot and the cropped image, comparing the RGB values.
 4. If a match is found, it records the coordinates of the match.
+
+BMP files have a specific format, each row of pixel data in a BMP file should be aligned to a 4-byte boundary
+```
+int padding = widthRGB % 4;
+if (padding != 0)
+{
+  padding = 4 - padding;
+}
+```
+if we fixed 1920 as width
+`int padding = (1920 * 3) % 4;`
+
+nice, we don't need skip padding
+
+
+
+
+
+
